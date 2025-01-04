@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Definindo a fonte Poppins e um fundo claro */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9; /* Fundo claro */
+    color: #333; /* Texto escuro para contraste */
+    line-height: 1.6;
+}
+
+/* Navbar estilizada */
+.navbar {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background-color: #ffffff; /* Fundo branco */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    z-index: 1000;
+    padding: 0.5rem 1rem; /* Reduzido para evitar rolagem lateral */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow-x: hidden; /* Remove qualquer rolagem lateral inesperada */
+    box-sizing: border-box;
+}
+
+.navbar .nav-links {
+    display: flex;
+    gap: 0.5rem; /* Espaço compacto entre os links */
+}
+
+.navbar a {
+    color: #0288d1; /* Azul forte */
+    text-decoration: none;
+    font-size: 0.9rem; /* Fonte menor para compactar */
+    font-weight: 500;
+    transition: color 0.3s;
+    padding: 0.3rem 0.5rem; /* Área clicável reduzida */
+}
+
+.navbar a:hover {
+    color: #0277bd; /* Azul mais escuro */
+}
+
+.navbar .logo {
+    font-size: 1.2rem; /* Reduzido para evitar largura excessiva */
+    font-weight: 600;
+    color: #1565c0; /* Azul vibrante */
+    white-space: nowrap; /* Impede quebra de linha no texto */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .navbar a {
+        font-size: 0.8rem;
+        padding: 0.2rem 0.4rem;
+    }
+
+    .navbar .logo {
+        font-size: 1rem;
+    }
+}
+
+
+/* Estilo para as seções de informações */
+.info-container {
+    margin: 2rem auto;
+    padding: 1.5rem;
+    max-width: 800px;
+    background-color: #ffffff; /* Fundo branco para destaque */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    border-radius: 8px; /* Bordas arredondadas */
+}
+
+.info-title {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    color: #1565c0; /* Azul vibrante */
+}
+
+.info {
+    font-size: 1rem;
+    color: #555; /* Texto cinza escuro */
+}
+
+/* Links ou botões (se necessário adicionar) */
+a {
+    color: #0288d1; /* Azul forte */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Ajuste para telas menores */
+@media (max-width: 768px) {
+    #title {
+        font-size: 2rem;
+    }
+
+    .info-title {
+        font-size: 1.5rem;
+    }
+
+    .info {
+        font-size: 0.9rem;
+    }
+}

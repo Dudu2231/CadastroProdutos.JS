@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produtos</title>
+    <link rel="stylesheet" href="products.css">
+</head>
+<body>
+    <h1>Lista de Produtos</h1> 
+    <div id="option-container">
+        <a href="/insertproduct">Inserir novo produto</a>
+    </div>
+    <div id="products-container"> <% products.forEach(product => { %> 
+        <div class="product-container"> 
+            <h2 class="products-name"><%= product.name %></h2> 
+            <p class="product-pricee">Preço: R$<%= product.price %></p> 
+            <p class="product-amount">Quantidade: <%= product.amount %></p>
+            <form action="/products/delete/<%= product._id %>?_method=DELETE" method="post">
+                <button id="delete-btn" type="submit">Deletar</button>
+            </form>
+            
+        </div> <% }); %>
+    </div>
+    
+</body>
+</html>

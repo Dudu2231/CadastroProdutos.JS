@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="register.css">
+    <title>Registre-se</title>
+</head>
+<body>
+    <div class="main-container">
+        <div class="card-infos">
+            <% if (error) { %>
+                <div class="error-message">
+                    <p><%= error %></p>
+                </div>
+            <% } %>
+        <form action="" method="post" id="register-form">
+            <label for="name">
+                Insira seu nome
+                <input id="name" name="name" type="text" minlength="2" required placeholder="Nome e sobrenome">
+            </label>
+            <label for="email">
+                Insira seu email
+                <input id="email" name="email" type="email" minlength="8" required placeholder="email@dominio.com">
+            </label>
+
+            <label for="password">
+                Insira sua senha
+                <input id="password" name="password" type="password" minlength="6" required>
+            </label>
+
+            <label for="password">
+                Confirme sua senha
+                <input id="password" name="confirmPassword" type="password" minlength="6" required>
+            </label>
+            <button type="submit" id="submit-btn">Registrar-se</button>
+            <a href="/login">Já possui uma conta?Login</a>
+        </form>
+    </div>
+</body>
+</html>

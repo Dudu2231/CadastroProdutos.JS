@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login.css">
+    <title>Login</title>
+</head>
+<body>
+    <div id="main-container">
+        <div id="title">Login</div>
+        <div class="card-infos">
+            <% if (error) { %>
+                <div class="error-message">
+                    <p><%= error %></p>
+                </div>
+            <% } %>
+        <form method="post" id="form-login" action="/login">
+            <label for="email" id="email-label">
+                Insira seu email
+                <input id="email-input" name="email" type="email" placeholder="email@dominio.com" required>
+            </label>
+
+            <label for="password" id="password-label">
+                Insira sua senha
+                <input id="password-input" name="password" type="password" minlength="6" required>
+            </label>
+            <a href="/register">Não possui uma conta? Registre-se</a>
+            <button type="submit" id="submit-btn">Entrar</button>
+        </form>
+    </div>
+</body>
+</html>

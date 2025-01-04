@@ -1,0 +1,117 @@
+/* Importando a fonte Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Estilo global */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9; /* Fundo claro */
+    color: #333; /* Texto escuro para contraste */
+    line-height: 1.6;
+}
+
+/* Estilo para o título principal */
+h1 {
+    text-align: center;
+    margin-top: 1.5rem;
+    font-size: 2.5rem;
+    color: #1565c0; /* Azul vibrante */
+}
+
+/* Estilo para o botão de inserir produto */
+#option-container {
+    text-align: center;
+    margin: 1rem 0;
+}
+
+#option-container a {
+    font-size: 1rem;
+    color: #ffffff;
+    background-color: #0288d1; /* Azul forte */
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+}
+
+#option-container a:hover {
+    background-color: #0277bd; /* Azul mais escuro */
+}
+
+#delete-btn{
+    background-color: rgb(223, 85, 85);
+    color: white;
+    border: none;
+    border-radius: 7px;
+    padding: 10px;
+    transition: all 0.20s;
+}
+#delete-btn:hover{
+    background-color: rgb(214, 59, 59);
+    cursor: pointer;
+}
+#delete-btn:active{
+    padding: 12px;
+}
+
+/* Container de produtos */
+#products-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+    padding: 2rem;
+}
+
+/* Estilo individual dos produtos */
+.product-container {
+    background-color: #ffffff; /* Fundo branco para destaque */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    border-radius: 8px; /* Bordas arredondadas */
+    padding: 1.5rem;
+    text-align: center;
+}
+
+/* Estilo do nome do produto */
+.products-name {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #1565c0; /* Azul vibrante */
+}
+
+/* Estilo do preço do produto */
+.product-pricee {
+    font-size: 1.2rem;
+    color: #0288d1; /* Azul forte */
+    margin-bottom: 0.5rem;
+}
+
+/* Estilo da quantidade do produto */
+.product-amount {
+    font-size: 1rem;
+    color: #555; /* Texto cinza escuro */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .product-container {
+        padding: 1rem;
+    }
+
+    .products-name {
+        font-size: 1.3rem;
+    }
+
+    .product-pricee {
+        font-size: 1rem;
+    }
+
+    .product-amount {
+        font-size: 0.9rem;
+    }
+}

@@ -1,0 +1,125 @@
+/* Importando a fonte Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Estilo global */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9; /* Fundo claro */
+    color: #333; /* Texto escuro para contraste */
+    line-height: 1.6;
+}
+
+/* Estilo para o título principal */
+h1, #title {
+    text-align: center;
+    margin-top: 1.5rem;
+    font-size: 2.5rem;
+    color: #1565c0; /* Azul vibrante */
+}
+
+/* Container principal */
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+/* Estilo do formulário */
+.card-infos {
+    background-color: #ffffff; /* Fundo branco para destaque */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    border-radius: 8px; /* Bordas arredondadas */
+    padding: 2rem;
+    width: 100%;
+    max-width: 500px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* Estilo dos labels */
+label {
+    font-size: 1rem;
+    color: #555; /* Texto cinza escuro */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Estilo dos inputs */
+input {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-top: 0.5rem;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+input:focus {
+    border-color: #1565c0; /* Azul vibrante */
+}
+
+/* Estilo do botão */
+button {
+    background-color: #0288d1; /* Azul forte */
+    color: #ffffff;
+    font-size: 1rem;
+    border: none;
+    border-radius: 4px;
+    padding: 0.75rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0277bd; /* Azul mais escuro */
+}
+
+/* Estilo da mensagem de erro */
+.error-message {
+    background-color: #ffcccc; /* Fundo vermelho claro */
+    color: #b71c1c; /* Vermelho escuro para o texto */
+    border: 1px solid #f44336; /* Borda vermelha */
+    border-radius: 8px; /* Bordas arredondadas */
+    padding: 1rem;
+    margin: 1rem 0;
+    text-align: center;
+    font-size: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    #title {
+        font-size: 2rem;
+    }
+
+    .card-infos {
+        padding: 1.5rem;
+    }
+
+    label {
+        font-size: 0.9rem;
+    }
+
+    input {
+        font-size: 0.9rem;
+    }
+
+    button {
+        font-size: 0.9rem;
+    }
+
+    .error-message {
+        font-size: 0.9rem;
+        padding: 0.75rem;
+    }
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="insertProducts.css">
+    <title>Inserir produto</title>
+</head>
+<body>
+    <div class="main-container">
+        <div id="title">Insira seu produto</div>
+        <div class="card-infos">
+            <% if (error) { %>
+                <div class="error-message">
+                    <p><%= error %></p>
+                </div>
+            <% } %>
+            <form action="/insertproduct" method="post">
+                <label for="name" id="name-label">
+                    Nome
+                    <input type="text" name="name" id="name" value="<%= name %>" required>
+                </label>
+
+                <label for="price" id="price-label">
+                    Preço (R$)
+                    <input type="text" name="price" id="price" value="<%= price %>" required>
+                </label>
+
+                <label for="amount" id="amount-label">
+                    Quantidade
+                    <input type="number" min="1" name="amount" id="amount" value="<%= amount %>" required>
+                </label>
+
+                <button type="submit">Adicionar</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
